@@ -39,6 +39,9 @@
                     RowNumber = no,
                 };
 
+                // 戦法クラスに行番号とか要らないんだが、デバッグのために付けてるぜ（＾～＾）
+                rowVM.Senpou.RowNumber = no;
+
                 var senpou = i % 4;
                 switch (senpou)
                 {

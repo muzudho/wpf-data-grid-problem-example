@@ -7,6 +7,29 @@
     /// </summary>
     public class SenpouViewModel : ViewModel
     {
+        private int rowNumber;
+
+        /// <summary>
+        /// 変更通知プロパティ 行番号
+        /// このクラスに行番号とか要らないんだが、デバッグのために付けてるぜ（＾～＾）
+        /// </summary>
+        public int RowNumber
+        {
+            get
+            {
+                return rowNumber;
+            }
+            set
+            {
+                if (rowNumber == value)
+                {
+                    return;
+                }
+                rowNumber = value;
+                RaisePropertyChanged(nameof(RowNumber));
+            }
+        }
+
         private bool isNotSelected;
 
         /// <summary>

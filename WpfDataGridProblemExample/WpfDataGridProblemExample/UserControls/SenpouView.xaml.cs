@@ -37,9 +37,12 @@
         private static void SenpouPropertyChanged(
                     DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
+            int? oldValueRowNumber = (args.OldValue == null) ? null : (int?)((SenpouViewModel)args.OldValue).RowNumber;
+            int? newValueRowNumber = (args.NewValue == null) ? null : (int?)((SenpouViewModel)args.NewValue).RowNumber;
+
             var oldValue = (args.OldValue == null) ? "null" : ((SenpouViewModel)args.OldValue).GetBitBoard();
             var newValue = (args.NewValue == null) ? "null" : ((SenpouViewModel)args.NewValue).GetBitBoard();
-            Trace.WriteLine($"[Trace] [SenpouView.cs SenpouPropertyChanged]: 戦法変更しました old={oldValue} new={newValue}");
+            Trace.WriteLine($"[Trace] [SenpouView.cs SenpouPropertyChanged]: 戦法変更しました [{oldValueRowNumber}]old={oldValue} [{newValueRowNumber}]new={newValue}");
         }
 
         public SenpouView()
