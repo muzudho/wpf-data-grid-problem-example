@@ -8,10 +8,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <DataGrid ItemsSource="{Binding Rows, ElementName=thisUserControl}">
+        <DataGrid
+            CanUserAddRows="False"
+            CanUserDeleteRows="False"
+            CanUserResizeColumns="False"
+            SelectionUnit="Cell"
+            RowHeaderWidth="0"
+            VirtualizingPanel.ScrollUnit="Pixel"            
+            AutoGenerateColumns="False"
+            ItemsSource="{Binding Rows, ElementName=thisUserControl}">
+            
             <DataGrid.Columns>
 
-                <DataGridTextColumn Header="行番号" Binding="{Binding Rows/RowNumber, ElementName=thisUserControl}">
+                <DataGridTextColumn Header="行番号" Binding="{Binding RowNumber}">
                     
                 </DataGridTextColumn>
                 
