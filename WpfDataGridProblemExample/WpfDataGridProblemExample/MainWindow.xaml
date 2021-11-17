@@ -22,8 +22,8 @@
 
         <!-- ボタン行 -->
         <StackPanel Orientation="Horizontal">
-            <Button Content="テストデータセット" Click="Button_Click" Height="30" VerticalAlignment="Top"/>
-       </StackPanel>
+            <Button Content="テストデータセット" Click="Button_Click"/>
+        </StackPanel>
 
         <!-- データグリッド -->
         <userControls:CustomDataGridView Grid.Row="1" Rows="{Binding Rows}" />

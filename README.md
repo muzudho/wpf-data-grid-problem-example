@@ -10,6 +10,15 @@ WPFのDataGrid の難しいところのサンプル（＾～＾）
 
 📖 [C# WPF Datagrid with recycling virtualization](https://stackoverflow.com/questions/35861976/c-sharp-wpf-datagrid-with-recycling-virtualization)  
 
+📖 [DataGridの基本的な事](http://tawamuredays.blog.fc2.com/blog-entry-71.html)  
+👆 この記事によると、DataGrid要素に……
+
+↓これは必須らしい
+VirtualizingStackPanel.IsVirtualizing="True"
+
+↓これが Recycleだと表示が乱れるらしい。Standardにすると直るが、メモリや速度に優しくないらしい
+VirtualizingStackPanel.VirtualizationMode="Standard"
+
 ## TODO 問題２
 
 背景色を変更できないコンボボックス  

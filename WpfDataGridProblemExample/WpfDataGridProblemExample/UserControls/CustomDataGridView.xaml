@@ -16,9 +16,15 @@
             RowHeaderWidth="0"
             VirtualizingPanel.ScrollUnit="Pixel"            
             AutoGenerateColumns="False"
+            VirtualizingStackPanel.IsVirtualizing="True"
             ItemsSource="{Binding Rows, ElementName=thisUserControl}">
             <!--
-            これを付ければ直るのでは？ ただしパフォーマンスが下がるらしい
+            📖 [DataGridの基本的な事](http://tawamuredays.blog.fc2.com/blog-entry-71.html)  
+            
+            ↓これは必須らしい
+            VirtualizingStackPanel.IsVirtualizing="True"
+            
+            ↓これが Recycleだと表示が乱れるらしい。Standardにすると直るが、メモリサイズを大量に消費してしまうらしい
             VirtualizingStackPanel.VirtualizationMode="Standard"
             -->
 
