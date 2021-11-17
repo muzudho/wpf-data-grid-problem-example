@@ -31,6 +31,10 @@
                 var rowVM = new RowViewModel()
                 {
                     RowNumber = no,
+                    Senpou = new SenpouViewModel()
+                    {
+                        IsFuribisha=true,
+                    }
                 };
 
                 windowVM.AddRow(rowVM);

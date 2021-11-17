@@ -1,33 +1,32 @@
 ﻿namespace WpfDataGridProblemExample.UserControls
 {
-    using System.Collections.ObjectModel;
     using System.Diagnostics;
     using System.Windows;
     using System.Windows.Controls;
     using WpfDataGridProblemExample.ViewModels;
 
     /// <summary>
-    /// CustomDataGridView.xaml の相互作用ロジック
+    /// RadioButtonView.xaml の相互作用ロジック
     /// </summary>
-    public partial class CustomDataGridView : UserControl
+    public partial class SenpouView : UserControl
     {
-        public static readonly DependencyProperty RowsProperty = DependencyProperty.Register(
+        public static readonly DependencyProperty SenpouProperty = DependencyProperty.Register(
             // プロパティ名
-            nameof(Rows),
+            nameof(Senpou),
             // プロパティの型
-            typeof(ObservableCollection<RowViewModel>),
+            typeof(SenpouViewModel),
             // 所有者の型
-            typeof(CustomDataGridView),
+            typeof(SenpouView),
             // デフォルト値
-            new UIPropertyMetadata(null, RowsPropertyChanged));
+            new UIPropertyMetadata(null, SenpouPropertyChanged));
 
         /// <summary>
         /// 依存関係プロパティ 行
         /// </summary>
-        public ObservableCollection<RowViewModel> Rows
+        public SenpouViewModel Senpou
         {
-            get { return (ObservableCollection<RowViewModel>)GetValue(RowsProperty); }
-            set { SetValue(RowsProperty, value); }
+            get { return (SenpouViewModel)GetValue(SenpouProperty); }
+            set { SetValue(SenpouProperty, value); }
         }
 
         /// <summary>
@@ -35,13 +34,13 @@
         /// </summary>
         /// <param name="sender">変更発生元</param>
         /// <param name="args">イベント引数</param>
-        private static void RowsPropertyChanged(
+        private static void SenpouPropertyChanged(
                     DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
-            Trace.WriteLine($"[Trace] [CustomDataGridView.cs RowsPropertyChanged]: 変更通知 変更しました 変更通知 old={args.OldValue} new={args.NewValue}");
+            Trace.WriteLine($"[Trace] [SenpouView.cs SenpouPropertyChanged]: 変更通知 変更しました 変更通知 old={args.OldValue} new={args.NewValue}");
         }
 
-        public CustomDataGridView()
+        public SenpouView()
         {
             InitializeComponent();
         }

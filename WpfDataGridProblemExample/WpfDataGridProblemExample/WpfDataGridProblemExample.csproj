@@ -85,7 +85,11 @@
     <Compile Include="UserControls\CustomDataGridView.xaml.cs">
       <DependentUpon>CustomDataGridView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\SenpouView.xaml.cs">
+      <DependentUpon>SenpouView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewModels\MainWindowViewModel.cs" />
+    <Compile Include="ViewModels\SenpouViewModel.cs" />
     <Compile Include="ViewModels\RowViewModel.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -100,6 +104,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="UserControls\CustomDataGridView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SenpouView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

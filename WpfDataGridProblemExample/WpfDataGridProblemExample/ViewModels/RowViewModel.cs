@@ -25,5 +25,32 @@
                 RaisePropertyChanged(nameof(RowNumber));
             }
         }
+
+        private SenpouViewModel senpou;
+
+        /// <summary>
+        /// 変更通知プロパティ 戦法
+        /// </summary>
+        public SenpouViewModel Senpou
+        {
+            get
+            {
+                if (senpou == null)
+                {
+                    senpou = new SenpouViewModel();
+                }
+
+                return senpou;
+            }
+            set
+            {
+                if (senpou == value)
+                {
+                    return;
+                }
+                senpou = value;
+                RaisePropertyChanged(nameof(Senpou));
+            }
+        }
     }
 }
