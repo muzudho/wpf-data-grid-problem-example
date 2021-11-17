@@ -17,6 +17,10 @@
             VirtualizingPanel.ScrollUnit="Pixel"            
             AutoGenerateColumns="False"
             ItemsSource="{Binding Rows, ElementName=thisUserControl}">
+            <!--
+            これを付ければ直るのでは？ ただしパフォーマンスが下がるらしい
+            VirtualizingStackPanel.VirtualizationMode="Standard"
+            -->
 
             <DataGrid.Columns>
 

@@ -8,6 +8,8 @@ WPFのDataGrid の難しいところのサンプル（＾～＾）
 
 👆　スクロールするとチェックが外れるラジオボタン  
 
+📖 [C# WPF Datagrid with recycling virtualization](https://stackoverflow.com/questions/35861976/c-sharp-wpf-datagrid-with-recycling-virtualization)  
+
 ## TODO 問題２
 
 背景色を変更できないコンボボックス  
