@@ -24,7 +24,7 @@
 
                 </DataGridTextColumn>
 
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="スクロールするとチェックが外れるラジオボタン">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <userControls:SenpouView Senpou="{Binding Senpou}"/>
