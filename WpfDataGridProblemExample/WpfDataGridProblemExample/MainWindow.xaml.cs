@@ -1,5 +1,6 @@
 ﻿namespace WpfDataGridProblemExample
 {
+    using System;
     using System.Diagnostics;
     using System.Windows;
     using WpfDataGridProblemExample.ViewModels;
@@ -31,11 +32,26 @@
                 var rowVM = new RowViewModel()
                 {
                     RowNumber = no,
-                    Senpou = new SenpouViewModel()
-                    {
-                        IsFuribisha=true,
-                    }
                 };
+
+                var senpou = i % 4;
+                switch (senpou)
+                {
+                    case 0:
+                        rowVM.Senpou.IsNotSelected = true;
+                        break;
+                    case 1:
+                        rowVM.Senpou.IsIbisha = true;
+                        break;
+                    case 2:
+                        rowVM.Senpou.IsFuribisha = true;
+                        break;
+                    case 3:
+                        rowVM.Senpou.IsAllRounder = true;
+                        break;
+                    default:
+                        throw new InvalidOperationException($"Unexpected senpou {senpou}");
+                }
 
                 windowVM.AddRow(rowVM);
             }
