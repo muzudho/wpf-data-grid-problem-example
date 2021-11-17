@@ -94,5 +94,19 @@
                 RaisePropertyChanged(nameof(IsAllRounder));
             }
         }
+
+        /// <summary>
+        /// チェックの状態をビットボード表現で返します
+        /// </summary>
+        /// <returns></returns>
+        public string GetBitBoard()
+        {
+            var notSelected = IsNotSelected ? 1 : 0;
+            var isIbisha = IsIbisha ? 1 : 0;
+            var isFuribisha = IsFuribisha ? 1 : 0;
+            var isAllRounder = IsAllRounder ? 1 : 0;
+
+            return $"{notSelected}{isIbisha}{isFuribisha}{isAllRounder}";
+        }
     }
 }
