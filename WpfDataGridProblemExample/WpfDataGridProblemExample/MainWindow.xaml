@@ -22,7 +22,7 @@
 
         <!-- ボタン行 -->
         <StackPanel Orientation="Horizontal">
-            <Button Content="テストデータセット" Click="Button_Click"/>
+            <Button Content="テストデータセット" Click="Button_Click" Height="30" VerticalAlignment="Top"/>
        </StackPanel>
 
         <!-- データグリッド -->

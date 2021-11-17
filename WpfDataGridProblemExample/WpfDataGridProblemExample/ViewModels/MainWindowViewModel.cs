@@ -30,5 +30,11 @@
                 RaisePropertyChanged(nameof(Rows));
             }
         }
+
+        public void AddRow(RowViewModel rowVM)
+        {
+            this.Rows.Add(rowVM);
+            RaisePropertyChanged(nameof(Rows));
+        }
     }
 }

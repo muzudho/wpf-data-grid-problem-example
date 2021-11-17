@@ -1,4 +1,5 @@
-﻿<UserControl x:Class="WpfDataGridProblemExample.UserControls.CustomDataGridView"
+﻿<UserControl x:Name="thisUserControl"
+             x:Class="WpfDataGridProblemExample.UserControls.CustomDataGridView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,7 +11,7 @@
         <DataGrid>
             <DataGrid.Columns>
 
-                <DataGridTextColumn Header="行番号">
+                <DataGridTextColumn Header="行番号" Binding="{Binding Rows/RowNumber, ElementName=thisUserControl}">
                     
                 </DataGridTextColumn>
                 
