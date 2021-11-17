@@ -37,7 +37,7 @@
         private static void SenpouPropertyChanged(
                     DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
-            Trace.WriteLine($"[Trace] [SenpouView.cs SenpouPropertyChanged]: 変更通知 変更しました 変更通知 old={args.OldValue} new={args.NewValue}");
+            Trace.WriteLine($"[Trace] [SenpouView.cs SenpouPropertyChanged]: 戦法変更しました old={args.OldValue} new={args.NewValue}");
         }
 
         public SenpouView()

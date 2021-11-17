@@ -38,7 +38,7 @@
         private static void RowsPropertyChanged(
                     DependencyObject sender, DependencyPropertyChangedEventArgs args)
         {
-            Trace.WriteLine($"[Trace] [CustomDataGridView.cs RowsPropertyChanged]: 変更通知 変更しました 変更通知 old={args.OldValue} new={args.NewValue}");
+            Trace.WriteLine($"[Trace] [CustomDataGridView.cs RowsPropertyChanged]: 行オブジェクト変更しました old={args.OldValue} new={args.NewValue}");
         }
 
         public CustomDataGridView()

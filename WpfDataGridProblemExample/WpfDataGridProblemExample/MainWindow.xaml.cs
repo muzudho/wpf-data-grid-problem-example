@@ -3,6 +3,7 @@
     using System;
     using System.Diagnostics;
     using System.Windows;
+    using System.Windows.Controls;
     using WpfDataGridProblemExample.ViewModels;
 
     /// <summary>
@@ -22,6 +23,10 @@
         /// <param name="e"></param>
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            // 2回も押さなくていいぜ（＾～＾）
+            var button = (Button)sender;
+            button.IsEnabled = false;
+
             Trace.WriteLine("[Trace] [MainWindow.cs Button_Click]: [テストデータセット]ボタン押下時");
             var windowVM = (MainWindowViewModel)this.DataContext;
 
